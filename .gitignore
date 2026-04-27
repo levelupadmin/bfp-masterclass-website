@@ -1,0 +1,28 @@
+node_modules
+.next
+out
+
+# secrets — never commit
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# editor / OS noise
+.DS_Store
+.vscode/*
+!.vscode/launch.json
+.idea/
+*.log
+npm-debug.log*
+
+# vercel CLI link metadata (gitignored so different machines don't clobber)
+.vercel
+
+# claude / preview tooling
+.claude/launch.json
+
+# prototype source (kept around for reference but not part of the app build)
+prototype/
+

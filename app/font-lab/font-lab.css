@@ -1,0 +1,206 @@
+/* ============================================================
+   FONT LAB — sandbox for heading-type experiments
+   Inherits root tokens from app/globals.css. Only adds local styles.
+   ============================================================ */
+
+.lab-root {
+  background: #0c0a08;
+  color: var(--fg);
+  min-height: 100vh;
+  padding: 32px clamp(20px, 5vw, 64px) 80px;
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+}
+
+/* topbar */
+.lab-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.lab-topbar-l { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.lab-stamp {
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  padding: 3px 10px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+.lab-meta { color: var(--fg-dim); }
+.lab-back { color: var(--fg-dim); transition: color 0.15s; }
+.lab-back:hover { color: var(--accent); }
+
+/* intro */
+.lab-intro {
+  margin: 48px 0 56px;
+  max-width: 70ch;
+}
+.lab-intro-h {
+  font-family: var(--font-display), "Anton", Impact, sans-serif;
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 0.96;
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.lab-intro-p {
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.55;
+  color: var(--fg-dim);
+  margin: 0;
+}
+
+/* grid of variants */
+.lab-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+@media (min-width: 1100px) {
+  .lab-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* variant card */
+.lab-variant {
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.018);
+  padding: clamp(20px, 3vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.lab-variant-meta {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 16px;
+  row-gap: 4px;
+  align-items: baseline;
+  padding-bottom: 14px;
+  border-bottom: 1px dashed var(--line-strong);
+}
+.lab-variant-no {
+  grid-row: 1 / span 2;
+  align-self: center;
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 24px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.lab-variant-name {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg);
+  font-weight: 600;
+}
+.lab-variant-sub {
+  font-family: var(--font-sans), "Inter", system-ui, sans-serif;
+  font-size: 12px;
+  color: var(--fg-dim);
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* sample area — uses --lab-display / --lab-serif / --lab-em-style */
+.lab-sample {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 4px 0 8px;
+}
+
+.lab-sample .lab-eyebrow {
+  align-self: flex-start;
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: rgba(245, 166, 35, 0.9);
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border: 1px solid rgba(245, 166, 35, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.lab-sample .lab-h1 {
+  font-family: var(--lab-display);
+  font-weight: 400;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 0.92;
+  letter-spacing: -0.012em;
+  margin: 0;
+  text-transform: uppercase;
+  color: #f5f1ea;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+}
+.lab-sample .lab-h1 span { display: block; }
+.lab-sample .lab-h1 em {
+  font-style: var(--lab-em-style);
+  color: var(--accent);
+  font-family: var(--lab-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  text-transform: none;
+}
+
+.lab-section {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.lab-section-no { color: var(--accent); font-weight: 700; }
+.lab-section-name { color: var(--fg-dim); }
+
+.lab-sample .lab-h2 {
+  font-family: var(--lab-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3.4vw, 44px);
+  line-height: 1;
+  letter-spacing: -0.005em;
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--fg);
+}
+.lab-sample .lab-h2 em {
+  font-style: var(--lab-em-style);
+  color: var(--accent);
+  font-family: var(--lab-serif);
+  font-weight: 400;
+  text-transform: none;
+}
+
+.lab-pull {
+  font-family: var(--lab-display);
+  font-size: clamp(56px, 8vw, 110px);
+  line-height: 0.85;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* mobile tightening */
+@media (max-width: 640px) {
+  .lab-root { padding: 20px 16px 60px; }
+  .lab-topbar { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .lab-intro { margin: 32px 0 36px; }
+  .lab-variant { padding: 18px; gap: 18px; }
+  .lab-variant-meta { grid-template-columns: auto 1fr; }
+  .lab-sample .lab-h1 { font-size: clamp(32px, 11vw, 56px); }
+  .lab-sample .lab-h2 { font-size: clamp(22px, 8vw, 36px); }
+  .lab-pull { font-size: clamp(48px, 16vw, 80px); }
+}
