@@ -4,7 +4,6 @@ export function FAQ({ faq }: { faq: Content["faq"] }) {
   return (
     <section className="cs-faq" id="faq">
       <div className="cs-section-head">
-        <span className="cs-section-no">08</span>
         <span className="cs-section-name">{faq.section}</span>
       </div>
       <h2 className="cs-h2">

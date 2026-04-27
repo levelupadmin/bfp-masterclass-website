@@ -37,9 +37,11 @@ export type Content = {
     closer: string;
   };
   pedigree: {
+    section: string;
     title: string;
     titleEm: string;
-    collage: string;
+    desktopCollage: string;
+    mobileCollage: string;
     collageAlt: string;
   };
   curriculum: { section: string; title: string; sub: string; modules: Module[] };
@@ -134,9 +136,11 @@ export const content: Content = {
   // Single collage image — drop the real collage at
   // /public/assets/pedigree-collage.jpg and update the path below.
   pedigree: {
+    section: "On Set With",
     title: "Learn from a mentor who has worked with",
     titleEm: "India's biggest filmmaking minds.",
-    collage: "/assets/filmmakers-collage.png",
+    desktopCollage: "/assets/pedigree-desktop-collage.png",
+    mobileCollage: "/assets/pedigree-mobile-collage.png",
     collageAlt:
       "Behind-the-scenes collage — Rahul on set with Lokesh Kanagaraj, Karthik Subbaraj, Ravi Basrur, DRK Kiran, G Venket Ram, Anthony Gonsalvez, and others.",
   },

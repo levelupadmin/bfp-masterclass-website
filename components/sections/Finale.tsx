@@ -11,7 +11,6 @@ export function Finale({ finale, onRegister }: Props) {
   return (
     <section className="cs-finale">
       <div className="cs-section-head">
-        <span className="cs-section-no">09</span>
         <span className="cs-section-name">{finale.section}</span>
       </div>
       <h2 className="cs-h2 cs-finale-h">

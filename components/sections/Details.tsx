@@ -4,7 +4,6 @@ export function Details({ details }: { details: Content["details"] }) {
   return (
     <section className="cs-details">
       <div className="cs-section-head">
-        <span className="cs-section-no">07</span>
         <span className="cs-section-name">{details.section}</span>
       </div>
       <h2 className="cs-h2">

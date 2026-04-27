@@ -4,7 +4,6 @@ export function Testimonials({ testimonials }: { testimonials: Content["testimon
   return (
     <section className="cs-testimonials">
       <div className="cs-section-head">
-        <span className="cs-section-no">06</span>
         <span className="cs-section-name">{testimonials.section}</span>
       </div>
       <h2 className="cs-h2">

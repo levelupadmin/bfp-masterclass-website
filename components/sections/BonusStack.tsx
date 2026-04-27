@@ -44,7 +44,6 @@ export function BonusStack({ bonus, targetDate, onRegister }: Props) {
   return (
     <section className="cs-bonus cs-light" id="register">
       <div className="cs-section-head">
-        <span className="cs-section-no">07</span>
         <span className="cs-section-name">{bonus.section}</span>
       </div>
       <h2 className="cs-h2">

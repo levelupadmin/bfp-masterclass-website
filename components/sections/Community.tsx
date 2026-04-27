@@ -6,7 +6,6 @@ export function Community({ community }: { community: Content["community"] }) {
   return (
     <section className="cs-community cs-light" id="about">
       <div className="cs-section-head">
-        <span className="cs-section-no">05</span>
         <span className="cs-section-name">{community.section}</span>
       </div>
 

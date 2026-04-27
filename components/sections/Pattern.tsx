@@ -4,7 +4,6 @@ export function Pattern({ pattern }: { pattern: Content["pattern"] }) {
   return (
     <section className="cs-pattern">
       <div className="cs-section-head">
-        <span className="cs-section-no">01</span>
         <span className="cs-section-name">{pattern.section}</span>
       </div>
       <h2 className="cs-h2">

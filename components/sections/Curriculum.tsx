@@ -46,7 +46,6 @@ export function Curriculum({ curriculum, onRegister }: Props) {
   return (
     <section className="cs-curriculum cs-light" id="curriculum">
       <div className="cs-section-head">
-        <span className="cs-section-no">02</span>
         <span className="cs-section-name">{curriculum.section}</span>
       </div>
 

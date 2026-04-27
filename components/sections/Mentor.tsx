@@ -5,7 +5,6 @@ export function Mentor({ mentor }: { mentor: Content["mentor"] }) {
   return (
     <section className="cs-mentor" id="mentor">
       <div className="cs-section-head">
-        <span className="cs-section-no">03</span>
         <span className="cs-section-name">{mentor.section}</span>
       </div>
       <div className="cs-mentor-grid">

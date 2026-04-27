@@ -4,7 +4,6 @@ export function Audience({ audience }: { audience: Content["audience"] }) {
   return (
     <section className="cs-audience">
       <div className="cs-section-head">
-        <span className="cs-section-no">04</span>
         <span className="cs-section-name">{audience.section}</span>
       </div>
       <h2 className="cs-h2">

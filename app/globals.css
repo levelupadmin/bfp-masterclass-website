@@ -82,31 +82,31 @@ button { font: inherit; }
   }
 }
 
-/* single collage image — the focal element of the section */
+/* collage image — the focal element of the section */
 .cs-pedigree-collage {
   margin: 0;
   position: relative;
   border: 1px solid var(--line-strong);
-  /* fallback gradient adapts to whichever theme is in use via tokens */
   background:
     linear-gradient(160deg, rgba(200, 122, 10, 0.16) 0%, rgba(20, 14, 8, 0.04) 70%),
     repeating-linear-gradient(45deg, rgba(200, 122, 10, 0.05) 0 1px, transparent 1px 22px),
     rgba(255, 255, 255, 0.45);
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
   overflow: hidden;
-  aspect-ratio: 16 / 9;
 }
 .cs-pedigree-collage img {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   filter: contrast(1.04) saturate(1.04);
 }
 
+/* Show desktop collage above 640px, mobile collage below */
+.cs-pedigree-collage--desktop { display: block; }
+.cs-pedigree-collage--mobile { display: none; }
 @media (max-width: 640px) {
-  .cs-pedigree-collage { aspect-ratio: 4 / 3; }
+  .cs-pedigree-collage--desktop { display: none; }
+  .cs-pedigree-collage--mobile { display: block; }
 }
 
 /* ============================================================
@@ -966,16 +966,21 @@ button { font: inherit; }
 }
 .cs-mentor-brands-list li { display: flex; align-items: center; }
 .cs-mentor-brands-list img {
-  height: 28px;
   width: auto;
   opacity: 0.75;
   filter: grayscale(0.1);
   transition: opacity 0.2s ease;
 }
+/* Per-brand optical sizing — Canon is a wide wordmark, Tata + TEDx are tighter */
+.cs-mentor-brands-list img[alt="Canon"] { height: 18px; }
+.cs-mentor-brands-list img[alt="TEDx"] { height: 26px; }
+.cs-mentor-brands-list img[alt="Tata"] { height: 30px; }
 .cs-mentor-brands-list li:hover img { opacity: 1; }
 @media (max-width: 640px) {
   .cs-mentor-brands-list { gap: 24px; }
-  .cs-mentor-brands-list img { height: 24px; }
+  .cs-mentor-brands-list img[alt="Canon"] { height: 15px; }
+  .cs-mentor-brands-list img[alt="TEDx"] { height: 22px; }
+  .cs-mentor-brands-list img[alt="Tata"] { height: 26px; }
 }
 .cs-mentor-stats {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
@@ -996,20 +1001,9 @@ button { font: inherit; }
    AUDIENCE
    ============================================================ */
 .cs-audience { padding: var(--section-pad); border-bottom: 1px solid var(--line); }
-/* boost prominence on the audience heading + the FOR YOU? em accent */
-.cs-audience .cs-h2 {
-  font-size: clamp(40px, 6.5vw, 96px);
-  letter-spacing: -0.012em;
-}
 .cs-audience .cs-h2 em {
   display: block;
-  font-size: 1.18em;
-  letter-spacing: -0.018em;
   margin-top: 0.05em;
-}
-@media (max-width: 640px) {
-  .cs-audience .cs-h2 { font-size: clamp(32px, 11vw, 56px); }
-  .cs-audience .cs-h2 em { font-size: 1.12em; }
 }
 .cs-audience-grid {
   display: grid;
