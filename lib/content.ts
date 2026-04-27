@@ -116,7 +116,7 @@ export const content: Content = {
       { id: "01", icon: "◷", label: "Date", primary: "Sun, 03 May 2026", secondary: "Sunday afternoon" },
       { id: "02", icon: "▷", label: "Time", primary: "11:00 AM – 1:00 PM IST", secondary: "+ 15 min live Q&A" },
       { id: "03", icon: "◉", label: "Where", primary: "Live on Zoom", secondary: "Link sent day before" },
-      { id: "04", icon: "★", label: "Bonus", primary: "₹19,899 value", secondary: "Yours on registration" },
+      { id: "04", icon: "★", label: "Bonus", primary: "₹9,799 value", secondary: "Yours on registration" },
     ],
   },
   pattern: {
@@ -321,7 +321,7 @@ export const content: Content = {
         id: "B / 04",
         title: "Access to the Level Up Community (Lifetime)",
         body: "Join 3,00,000+ aspiring and working filmmakers across India.",
-        value: "₹9,900 value",
+        value: "Priceless",
       },
     ],
   },
