@@ -25,9 +25,6 @@ export function Finale({ finale, onRegister }: Props) {
         <button className="cs-btn" type="button" onClick={onRegister}>
           {finale.primary} →
         </button>
-        <a href="#curriculum" className="cs-btn cs-btn-ghost">
-          {finale.secondary}
-        </a>
       </div>
       <p className="cs-finale-note">{finale.note}</p>
     </section>

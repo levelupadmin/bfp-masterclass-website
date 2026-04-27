@@ -52,7 +52,7 @@ export function Curriculum({ curriculum, onRegister }: Props) {
       <div className="cs-curr-head">
         <div className="cs-curr-head-l">
           <h2 className="cs-h2">
-            What you&apos;ll learn <em>in two hours.</em>
+            Here&apos;s exactly <em>what we&apos;ll cover.</em>
           </h2>
           <p className="cs-section-sub">{curriculum.sub}</p>
         </div>

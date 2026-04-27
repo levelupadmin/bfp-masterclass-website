@@ -21,6 +21,7 @@ export function Pattern({ pattern }: { pattern: Content["pattern"] }) {
         ))}
       </ul>
       <p className="cs-pattern-closer">{pattern.closer}</p>
+      <p className="cs-pattern-bridge">{pattern.bridge}</p>
     </section>
   );
 }

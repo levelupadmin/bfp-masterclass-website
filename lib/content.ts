@@ -35,6 +35,7 @@ export type Content = {
     pull: string;
     bullets: string[];
     closer: string;
+    bridge: string;
   };
   pedigree: {
     section: string;
@@ -86,7 +87,6 @@ export type Content = {
     title: string;
     body: string[];
     primary: string;
-    secondary: string;
     note: string;
   };
   footer: { links: string[]; copyright: string };
@@ -100,7 +100,7 @@ export const content: Content = {
   hero: {
     eyebrow: "— A 2-HOUR MASTERCLASS —",
     title: "How to start your filmmaking career in 2026.",
-    sub: "A 2-hour live session and learn the exact path professional filmmakers are using today, even if you've never picked up a camera.",
+    sub: "Learn the exact path professional filmmakers are using today, even if you've never picked up a camera.",
     cta: "Enroll Now",
     headerCta: "Reserve seat",
     note: "No prior experience required",
@@ -116,7 +116,7 @@ export const content: Content = {
       { id: "01", icon: "◷", label: "Date", primary: "Sun, 03 May 2026", secondary: "Sunday afternoon" },
       { id: "02", icon: "▷", label: "Time", primary: "11:00 AM – 1:00 PM IST", secondary: "+ 15 min live Q&A" },
       { id: "03", icon: "◉", label: "Where", primary: "Live on Zoom", secondary: "Link sent day before" },
-      { id: "04", icon: "★", label: "Bonus", primary: "₹14,900 value", secondary: "Yours on registration" },
+      { id: "04", icon: "★", label: "Bonus", primary: "₹19,899 value", secondary: "Yours on registration" },
     ],
   },
   pattern: {
@@ -131,7 +131,9 @@ export const content: Content = {
       "If you've been waiting for the \"right time,\" the \"right camera,\" or the \"right connections\"…",
     ],
     closer:
-      "You're not alone. You're in the 99. And the reason you're stuck isn't laziness. It isn't lack of talent. It's a system that was designed to keep you out.",
+      "You're not alone. You're in the 99. And the reason you're stuck isn't laziness. It isn't lack of talent — it's a system that was designed to keep you out.",
+    bridge:
+      "But that system has cracked open. In the next 2 hours, we'll show you exactly how to walk through.",
   },
   // Single collage image — drop the real collage at
   // /public/assets/pedigree-collage.jpg and update the path below.
@@ -145,9 +147,9 @@ export const content: Content = {
       "Behind-the-scenes collage — Rahul on set with Lokesh Kanagaraj, Karthik Subbaraj, Ravi Basrur, DRK Kiran, G Venket Ram, Anthony Gonsalvez, and others.",
   },
   curriculum: {
-    section: "The Curriculum",
-    title: "What you'll learn in two hours.",
-    sub: "Five modules. One working framework. No fluff. Here's the exact map of what gets taught, in order.",
+    section: "The Path",
+    title: "Here's exactly what we'll cover.",
+    sub: "Five modules. One working framework. The exact map for walking through those open gates.",
     // Module images live in /public/assets/curriculum/.
     // Regenerate via: node scripts/gen-curriculum-images.mjs
     modules: [
@@ -172,7 +174,7 @@ export const content: Content = {
         tag: "Workflow",
         title: "How a Short Film Actually Gets Made",
         body:
-          "Forget the \"vibes and vision\" myth. Using a scene from a film you already love as the case study, we break down the end-to-end workflow: the 7 pre-production documents, the shot list, the schedule and the budget breakdown that turn an idea into an actual film.",
+          "The end-to-end workflow, broken down using a scene from a film you already love. 7 pre-production documents. The shot list. The schedule. The budget. The truth.",
         image: "/assets/curriculum/mod-3.jpg",
       },
       {
@@ -180,7 +182,7 @@ export const content: Content = {
         tag: "Craft",
         title: "The 5 Craft Layers Every Great Scene Uses",
         body:
-          "Writing. Directing. Cinematography. Editing. Sound. We take one 60-second scene and show you the 30+ deliberate creative decisions hidden inside it. This is the difference between watching films and understanding films.",
+          "Writing. Directing. Cinematography. Editing. Sound. We take one 60-second scene and reveal the 30+ creative decisions hidden inside. This is how you stop watching films and start understanding them.",
         image: "/assets/curriculum/mod-4.jpg",
       },
       {
@@ -196,15 +198,15 @@ export const content: Content = {
   mentor: {
     section: "The Mentor",
     title: "Meet Rahul Srinivas.",
-    role: "Founder of LevelUp Learning",
+    role: "Founder Of LevelUp Learning | Storyteller | Director | Producer",
     portrait: "/assets/rahul-portrait.png",
     paras: [
-      "Rahul has spent the last decade doing something no one else has done in India, building a platform where aspiring filmmakers actually break into the industry, without a film school degree or family connections.",
-      "Under his leadership, LevelUp Learning has grown into India's largest filmmaking community, with 3,00,000+ members, 60,000+ students trained, 100+ feature films and 1,000+ short films credited to its alumni.",
-      "He has personally hosted masterclasses with some of the most acclaimed names in Indian cinema, including Karthik Subbaraj and Lokesh Kanagaraj, and has directly taught over 2,100 filmmakers now working across OTT, advertising and independent cinema.",
-      "In this session, Rahul is distilling everything he's learned from the last 10 years: what actually works in 2026, what doesn't, and what aspiring filmmakers keep getting wrong.",
+      "Rahul started LevelUp Learning with no connections in the film industry and turned it into India's largest filmmaking community, with 3,00,000+ members and 60,000+ students trained.",
+      "But before he was building communities, he was a storyteller. That's still the core of how he sees filmmaking — not as a technical exercise, but as the craft of moving people. It's the lens he brings to every script he writes, every project he produces, and every session he teaches.",
+      "He has directed masterclasses with some of the most acclaimed names in Indian cinema, including Karthik Subbaraj, Lokesh Kanagaraj, Nelson Dilipkumar, and Ravi Basrur. He's spent years studying how the best in the business actually think, work, and break in.",
+      "He knows this world. And in this session, he'll show you how to get started in yours.",
     ],
-    brandsLabel: "Trusted by",
+    brandsLabel: "Worked With",
     brands: [
       { name: "TEDx", src: "/assets/brands/tedx.svg" },
       { name: "Canon", src: "/assets/brands/canon.svg" },
@@ -301,7 +303,7 @@ export const content: Content = {
         id: "B / 01",
         title: "Live 2-Hour Masterclass with Rahul Srinivas",
         body: "Industry insights you won't find on YouTube.",
-        value: "Included",
+        value: "₹4,999 value · Free today",
       },
       {
         id: "B / 02",
@@ -330,7 +332,7 @@ export const content: Content = {
       {
         q: "Is this actually free? What's the catch?",
         a:
-          "Yes, it's genuinely free. No catch, no trial, no credit card required. We offer this masterclass free because we know the Indian filmmaking space is full of people with real talent who've been gatekept by cost. This is our way of opening the first door. We do run a paid advanced program for those who want to go deeper (we'll mention it briefly at the end), but the 2 hours of teaching are yours, no strings attached.",
+          "Yes — genuinely free. No card, no trial, no catch. We do run a paid program for people who want to go deeper, and we'll mention it briefly at the end. The 2 hours of teaching are yours, no strings.",
       },
       {
         q: "Do I need any filmmaking experience to join?",
@@ -350,7 +352,7 @@ export const content: Content = {
       {
         q: "How is this different from free YouTube content?",
         a:
-          "YouTube teaches you techniques. This session teaches you a career path: how the Indian filmmaking industry actually works in 2026, which doors are open, which are closed, and how real people with real jobs and real constraints are breaking in right now. That's an insider perspective you can't find in a tutorial.",
+          "YouTube teaches techniques. This teaches a career path — how the Indian industry actually works in 2026, which doors are open, and how real people are walking through them.",
       },
       {
         q: "Who is this NOT for?",
@@ -365,7 +367,7 @@ export const content: Content = {
       {
         q: "I'm not from India, can I still join?",
         a:
-          "Absolutely. While many of our case studies are from Indian cinema, the principles (the 5 doors, the short film workflow, the craft layers) apply universally. We've had participants from 40+ countries.",
+          "Yes. The frameworks (5 doors, short film workflow, craft layers) apply universally. We've had participants from 40+ countries.",
       },
       {
         q: "What if I still have questions after registering?",
@@ -384,7 +386,6 @@ export const content: Content = {
       "Which one are you?",
     ],
     primary: "Reserve My Free Seat",
-    secondary: "Review the Curriculum",
     note: "Seats are limited · The decision is yours",
   },
   footer: {
