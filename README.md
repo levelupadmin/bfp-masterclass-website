@@ -114,3 +114,4 @@ Each section is its own file in `components/sections/`. To add a new one:
 ## Need to talk to a human?
 
 The site was built collaboratively in conversation. For deeper changes (new components, redesigns, integrations), open an issue or talk to the maintainer. For copy changes, EDITING.md has everything you need.
+
