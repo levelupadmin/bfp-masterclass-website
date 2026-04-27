@@ -18,7 +18,6 @@ import { FAQ } from "@/components/sections/FAQ";
 import { Finale } from "@/components/sections/Finale";
 import { SiteFooter } from "@/components/sections/SiteFooter";
 
-const HERO_BG_URL = process.env.NEXT_PUBLIC_HERO_BG_URL || "/assets/hero-bg.jpg";
 const CHECKOUT_URL =
   process.env.NEXT_PUBLIC_CHECKOUT_URL ||
   "https://study.leveluplearning.in/web/checkout/69eed572931f0714f1f00fee";
@@ -33,7 +32,7 @@ export default function Home() {
   return (
     <main className="cs-root">
       <SiteHeader brand={content.brand} cta={content.hero.headerCta} onRegister={onRegister} />
-      <HeroCinematic hero={content.hero} onRegister={onRegister} bgImageUrl={HERO_BG_URL} />
+      <HeroCinematic hero={content.hero} onRegister={onRegister} />
       <Ticker text={content.hero.ticker} />
       <SessionStrip session={content.session} />
       <MentorPedigree pedigree={content.pedigree} />

@@ -5,22 +5,33 @@ import type { Content } from "@/lib/content";
 type Props = {
   hero: Content["hero"];
   onRegister: () => void;
-  bgImageUrl: string;
+  bgDesktop?: string;
+  bgMobile?: string;
 };
 
-export function HeroCinematic({ hero, onRegister, bgImageUrl }: Props) {
+export function HeroCinematic({
+  hero,
+  onRegister,
+  bgDesktop = "/assets/hero-desktop.png",
+  bgMobile = "/assets/hero-mobile.png",
+}: Props) {
   return (
     <section className="cs-hero-cine">
       <div className="cs-hero-bg-wrap">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="cs-hero-bg"
-          src={bgImageUrl}
-          alt=""
-          aria-hidden
-          loading="eager"
-          decoding="async"
-        />
+        <picture>
+          <source media="(max-width: 640px)" srcSet={bgMobile} />
+          <source media="(min-width: 641px)" srcSet={bgDesktop} />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className="cs-hero-bg"
+            src={bgDesktop}
+            alt=""
+            aria-hidden
+            loading="eager"
+            decoding="async"
+          />
+        </picture>
         <div className="cs-hero-vignette" />
         <div className="cs-hero-gradient" />
       </div>

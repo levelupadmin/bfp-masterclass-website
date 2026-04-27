@@ -17,6 +17,57 @@
   --paper: #efe9dc;
   --paper-fg: #161310;
   --accent: #f5a623; /* marquee amber */
+  --r-1: 8px;
+  --r-2: 16px;
+  --r-3: 24px;
+  --r-4: 32px;
+}
+
+/* ============================================================
+   GLOBAL CORNER RADII — no sharp corners on boxes/divs.
+   Min 8px; larger surfaces step up in multiples of 8.
+   :where() = 0-specificity, so existing overrides still win.
+   ============================================================ */
+:where(
+  button, input, select, textarea,
+  .cs-btn, .cs-btn-ghost, .cs-btn-sm,
+  .cs-hero-eyebrow,
+  .cs-slate, .cs-slate-row,
+  .cs-tcstrip-marks .cs-mark, .cs-tcstrip-marks .cs-mark-major,
+  .cs-session-card, .cs-session-card-icon,
+  .cs-curr-card-no, .cs-module-no, .cs-bullet-no,
+  .cs-audience-item, .cs-audience-grid,
+  .cs-community-stat,
+  .cs-quote, .cs-faq-item, .cs-detail-card, .cs-bonus-item,
+  .cs-modules, .cs-modules-head, .cs-module-row,
+  .cs-mentor-stats > div, .cs-mentor-stats div,
+  .cs-countdown, .cs-countdown-grid > div, .cs-countdown-grid div,
+  .cs-seat-bar, .cs-seat-bar > div,
+  .cs-curr-dot,
+  .cs-field input, .cs-field select, .cs-field textarea,
+  .cs-mentor-brands-list img,
+  dialog, fieldset
+) {
+  border-radius: var(--r-1);
+}
+
+:where(
+  .cs-curr-card, .cs-curr-card-img,
+  .cs-not-for,
+  .cs-community-card,
+  .cs-portrait, .cs-portrait img,
+  .cs-session-feature-mark
+) {
+  border-radius: var(--r-2);
+}
+
+:where(
+  .cs-pedigree-collage,
+  .cs-community-collage img,
+  .cs-hero-sheet-cine,
+  .cs-modal, .cs-modal-content
+) {
+  border-radius: var(--r-3);
 }
 
 * { box-sizing: border-box; }
@@ -1393,7 +1444,7 @@ button { font: inherit; }
   padding: 12px 14px;
   font-family: var(--font-sans), "Aileron", "Inter", system-ui, sans-serif;
   font-size: 15px;
-  border-radius: 0;
+  border-radius: var(--r-1);
   transition: border-color 0.15s;
   width: 100%;
   min-width: 0;

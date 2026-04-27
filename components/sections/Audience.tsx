@@ -19,7 +19,9 @@ export function Audience({ audience }: { audience: Content["audience"] }) {
         ))}
       </div>
       <aside className="cs-not-for">
-        <h3 className="cs-not-for-h">{audience.notForTitle}</h3>
+        <h3 className="cs-not-for-h">
+          This is NOT for <em>you</em> if&hellip;
+        </h3>
         <p className="cs-not-for-body">{audience.notFor}</p>
       </aside>
     </section>
