@@ -20,7 +20,7 @@ import { SiteFooter } from "@/components/sections/SiteFooter";
 
 const CHECKOUT_URL =
   process.env.NEXT_PUBLIC_CHECKOUT_URL ||
-  "https://study.leveluplearning.in/web/checkout/69eed572931f0714f1f00fee";
+  "https://tally.so/r/gDQ1Dl";
 
 export default function Home() {
   const onRegister = () => {
