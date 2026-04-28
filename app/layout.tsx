@@ -48,19 +48,22 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_TITLE = "BFP Masterclass — Start your filmmaking career in 2026";
+
 export const metadata: Metadata = {
-  title: "BFP Masterclass — Start your filmmaking career in 2026",
+  title: SITE_TITLE,
   description: content.hero.sub,
-  metadataBase: new URL("https://bfpmasterclass.example.com"),
+  metadataBase: new URL("https://bfp.leveluplearning.in"),
   openGraph: {
-    title: "BFP Masterclass — Start your filmmaking career in 2026",
+    title: SITE_TITLE,
     description: content.hero.sub,
     type: "website",
-    images: ["/assets/rahul-portrait.png"],
+    siteName: "LevelUp Learning",
+    url: "https://bfp.leveluplearning.in",
   },
   twitter: {
     card: "summary_large_image",
-    title: "BFP Masterclass — Start your filmmaking career in 2026",
+    title: SITE_TITLE,
     description: content.hero.sub,
   },
   robots: { index: true, follow: true },
