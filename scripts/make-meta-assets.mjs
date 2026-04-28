@@ -5,28 +5,20 @@ import { dirname, resolve } from "path";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
 
-// 1) Favicon — square crop of the LevelUp logo with cream padding.
-//    Next.js picks up app/icon.png automatically and emits the link tags.
+// 1) Favicon — stacked LevelUp mark (logo + Up wordmark). Already shipped
+//    as a square 512×512, just normalize and copy to app/icon.png so Next
+//    picks it up automatically.
 {
-  const src = resolve(root, "public/assets/levelup-logo.png");
+  const src = resolve(root, "public/assets/levelup-live-stacked.png");
   const out = resolve(root, "app/icon.png");
   const meta = await sharp(src).metadata();
-  const size = 512;
-  const inner = Math.round(size * 0.78);
-  const logo = await sharp(src)
-    .resize({ width: inner, height: inner, fit: "inside", background: { r: 0, g: 0, b: 0, alpha: 0 } })
-    .toBuffer();
-  await sharp({
-    create: { width: size, height: size, channels: 4, background: { r: 12, g: 10, b: 8, alpha: 1 } },
-  })
-    .composite([{ input: logo, gravity: "center" }])
+  await sharp(src).resize(512, 512, { fit: "contain", background: { r: 255, g: 255, b: 255, alpha: 1 } })
     .png()
     .toFile(out);
-  console.log(`icon.png  ${size}x${size}  ← logo ${meta.width}x${meta.height}`);
+  console.log(`icon.png  512x512  ← stacked ${meta.width}x${meta.height}`);
 }
 
-// 2) Apple touch icon — same look, 180×180 is the iOS standard but Next will
-//    upscale a 512 source automatically; we keep parity with icon.png.
+// 2) Apple touch icon — 180×180, same source so iOS home-screen matches.
 {
   const src = resolve(root, "app/icon.png");
   const out = resolve(root, "app/apple-icon.png");
