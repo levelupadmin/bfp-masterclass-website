@@ -113,7 +113,7 @@ export const content: Content = {
       title: "Find your way into filmmaking in two hours.",
     },
     metrics: [
-      { id: "01", icon: "◷", label: "Date", primary: "Sun, 03 May 2026", secondary: "Sunday afternoon" },
+      { id: "01", icon: "◷", label: "Date", primary: "Sun, 17 May 2026", secondary: "Sunday afternoon" },
       { id: "02", icon: "▷", label: "Time", primary: "11:00 AM – 1:00 PM IST", secondary: "+ 15 min live Q&A" },
       { id: "03", icon: "◉", label: "Where", primary: "Live on Zoom", secondary: "Link sent day before" },
       { id: "04", icon: "★", label: "Bonus", primary: "₹9,799 value", secondary: "Yours on registration" },
@@ -280,7 +280,7 @@ export const content: Content = {
     title: "Here's everything you need to know.",
     sub: "The masterclass is completely free. All we need is your commitment to show up live.",
     items: [
-      { icon: "◷", label: "When", primary: "Sun · 03 May 2026", secondary: "Sunday · 11:00 AM IST" },
+      { icon: "◷", label: "When", primary: "Sun · 17 May 2026", secondary: "Sunday · 11:00 AM IST" },
       { icon: "▷", label: "Duration", primary: "2 hours live", secondary: "+ 15 min live Q&A" },
       {
         icon: "◉",
@@ -296,7 +296,7 @@ export const content: Content = {
     title: "The bonus stack. Yours the moment you register.",
     sub:
       "Four assets you'll actually use in the next 30 days: worksheets, frameworks and community access. Delivered right after the session.",
-    countdown: { d: "02", h: "14", m: "29", s: "38" },
+    countdown: { d: "19", h: "01", m: "10", s: "00" },
     seats: { taken: 389, total: 500, remaining: 111 },
     items: [
       {
@@ -395,5 +395,5 @@ export const content: Content = {
 };
 
 // Target date for live countdown — masterclass start time.
-// 11:00 AM IST on 3 May 2026 = 05:30 UTC (IST is UTC+5:30).
-export const REGISTRATION_DEADLINE = new Date("2026-05-03T05:30:00.000Z");
+// 11:00 AM IST on 17 May 2026 = 05:30 UTC (IST is UTC+5:30).
+export const REGISTRATION_DEADLINE = new Date("2026-05-17T05:30:00.000Z");

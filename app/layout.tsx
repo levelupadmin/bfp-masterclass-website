@@ -76,8 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     "@context": "https://schema.org",
     "@type": "Event",
     name: "BFP Masterclass — How to start your filmmaking career in 2026",
-    startDate: "2026-05-03T11:00:00+05:30",
-    endDate: "2026-05-03T13:15:00+05:30",
+    startDate: "2026-05-17T11:00:00+05:30",
+    endDate: "2026-05-17T13:15:00+05:30",
     eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
     eventStatus: "https://schema.org/EventScheduled",
     location: {

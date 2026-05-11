@@ -96,10 +96,10 @@ export function RegistrationModal({ open, onClose }: Props) {
       "VERSION:2.0",
       "PRODID:-//LevelUp Learning//BFP Masterclass//EN",
       "BEGIN:VEVENT",
-      "UID:bfp-masterclass-2026-05-03@levelup",
-      "DTSTAMP:20260420T000000Z",
-      "DTSTART:20260503T053000Z",
-      "DTEND:20260503T074500Z",
+      "UID:bfp-masterclass-2026-05-17@levelup",
+      "DTSTAMP:20260428T000000Z",
+      "DTSTART:20260517T053000Z",
+      "DTEND:20260517T074500Z",
       "SUMMARY:BFP Masterclass — How to start your filmmaking career in 2026",
       "DESCRIPTION:Live 2-hour masterclass with Rahul Srinivas. Zoom link sent the day before.",
       "LOCATION:Live on Zoom",
@@ -212,7 +212,7 @@ export function RegistrationModal({ open, onClose }: Props) {
               <div className="cs-confirm-details">
                 <div>
                   <span>WHEN</span>
-                  <span>Sun · 03 May 2026 · 11:00 AM IST</span>
+                  <span>Sun · 17 May 2026 · 11:00 AM IST</span>
                 </div>
                 <div>
                   <span>DURATION</span>
